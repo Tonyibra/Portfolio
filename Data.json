@@ -1,0 +1,17 @@
+[
+    {
+        "img":"https://www.ceotodaymagazine.com/CEO-Today/wp-content/uploads/2019/10/Google-Docs-e1570528347607.jpg",
+        "title":"Google Docs Clone",
+        "desc":"I created an online word processor that lets you create and format documents and work with other people. Using Nextjs and used firebase for authentication and firestore as a database",
+        "isLive":true,
+        "live": "https://docs-tonyibra.vercel.app/",
+        "githubLink":""
+    },
+    {
+        "img":"https://www.ceotodaymagazine.com/CEO-Today/wp-content/uploads/2019/10/Google-Docs-e1570528347607.jpg",
+        "title":"Google Docs Clone",
+        "desc":"I created an online word processor that lets you create and format documents and work with other people. Using Nextjs and used firebase for authentication and firestore as a database",
+        "isLive":false,
+        "githubLink":""
+    }
+]
