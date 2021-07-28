@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/Link";
+import Link from "next/link";
 const Header = () => {
   return (
     <div className="flex space-x-4 p-4 items-center">
