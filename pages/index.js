@@ -21,6 +21,7 @@ export default function Home() {
       </header>
       {/* Body */}
       <main>
+        <span className="text-gray-700 text-4xl p-10">Portfolio</span>
         {isLoading && <span>Loading...</span>}
         <Portfolio data={data} />
       </main>
