@@ -2,8 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "../Components/Header";
 import Portfolio from "../Components/Portfolio";
-
+import { QueryClient, useQuery } from "react-query";
+import { dehydrate } from "react-query/hydration";
+import { getProjects } from "../services/Services";
 export default function Home() {
+  const { data, isLoading, error } = useQuery("projects", getProjects);
+  console.log(data);
   return (
     <div className="font-primary">
       <Head>
@@ -17,10 +21,23 @@ export default function Home() {
       </header>
       {/* Body */}
       <main>
-        <Portfolio />
+        <span className="text-gray-700 text-4xl p-10">Portfolio</span>
+        {isLoading && <span>Loading...</span>}
+        <Portfolio data={data} />
       </main>
       {/* Footer */}
       <footer></footer>
     </div>
   );
+}
+
+export async function getServerSideProps(dehydratedState) {
+  const queryClient = new QueryClient();
+  await queryClient.prefetchQuery("projects", getProjects);
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  };
 }
