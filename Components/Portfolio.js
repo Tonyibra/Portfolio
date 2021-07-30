@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
-const Portfolio = ({ data }) => {
-  console.log(data);
+const Portfolio = () => {
   return (
     <div className="grid md:grid-cols-2">
       {data?.map((project, idx) => (
