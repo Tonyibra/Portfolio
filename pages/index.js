@@ -7,7 +7,6 @@ import { dehydrate } from "react-query/hydration";
 import { getProjects } from "../services/Services";
 export default function Home() {
   const { data, isLoading, error } = useQuery("projects", getProjects);
-  console.log(data);
   return (
     <div className="font-primary">
       <Head>
